@@ -1,5 +1,7 @@
 # H1 Light Worker — Installation Guide
 
+> **Ключевой принцип:** `NATS_SERVERS` и `NATS_TOKEN` берутся **только из `.env`** — ничего не нужно менять в коде (`worker_playwright.py`) при установке на новых Light-нодах. Заполни `.env` по шаблону `.env.example` и убедись, что воркер виден в NATS (`/connz`).
+
 ## Requirements
 
 - **OS**: Windows 10/11

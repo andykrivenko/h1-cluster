@@ -1,5 +1,7 @@
 # H1 Heavy Server — Installation Guide
 
+> **Ключевой принцип:** `NATS_SERVERS` и `NATS_TOKEN` берутся **только из `.env`** — ничего не нужно менять в коде (`orchestrator.py`, `security_monitor.py`) при установке на новых серверах. Заполни `.env` по шаблону `.env.example` — и всё готово.
+
 ## Requirements
 
 - **OS**: Windows 10/11 or Windows Server 2019+

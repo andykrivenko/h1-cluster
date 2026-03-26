@@ -1,5 +1,7 @@
 # H1 — Distributed Automation Cluster
 
+> **Важно:** `NATS_SERVERS` и `NATS_TOKEN` берутся **только из `.env`** — ничего не нужно менять в коде при установке на новых Heavy или Light серверах. Достаточно заполнить `.env` по шаблону `.env.example`.
+
 H1 is a distributed task automation system built on [NATS](https://nats.io/) messaging.  
 It consists of **Heavy** servers (NATS + Orchestrator) and **Light** workers (Playwright executors).
 
