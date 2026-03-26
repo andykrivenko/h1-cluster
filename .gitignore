@@ -1,0 +1,49 @@
+# Environment files — NEVER commit real credentials
+.env
+*.env
+!.env.example
+
+# NATS credentials and keys
+*.creds
+*.nk
+*.jwt
+
+# Logs
+logs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.Python
+venv/
+env/
+.venv/
+pip-log.txt
+
+# Playwright
+playwright-report/
+test-results/
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+
+# Distribution
+dist/
+build/
+*.egg-info/
