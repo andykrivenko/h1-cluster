@@ -10,8 +10,9 @@ from nats.aio.client import Client as NATS
 async def main():
     nc = NATS()
 
-    servers = ['nats://192.168.99.11:4222', 'nats://192.168.99.12:4222']
-    token = 'h1_secret_token'
+    servers_str = os.getenv("NATS_SERVERS", "nats://127.0.0.1:4222")
+    servers = [s.strip() for s in servers_str.split(',')]
+    token = os.getenv("NATS_TOKEN", "")
 
     print(f"[*] Connecting to NATS: {servers}")
     await nc.connect(servers=servers, token=token, connect_timeout=10)

@@ -14,8 +14,8 @@ Usage:
     python mcp_hh_expert_bridge.py
 
 .env variables:
-    NATS_SERVERS=nats://192.168.99.11:4222,nats://192.168.99.12:4222
-    NATS_TOKEN=h1_secret_token
+    NATS_SERVERS=nats://192.168.XX.11:4222,nats://192.168.XX.12:4222
+    NATS_TOKEN=your_secret_token_here
     HH_EXPERT_PY=C:\\path\\to\\hh_expert\\server.py
     HH_EXPERT_PYTHON=python
     HH_EXPERT_WORKDIR=C:\\path\\to\\hh_expert

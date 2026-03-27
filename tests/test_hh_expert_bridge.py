@@ -23,9 +23,9 @@ from nats.errors import TimeoutError as NatsTimeout
 
 load_dotenv()
 
-NATS_SERVERS_STR = os.getenv("NATS_SERVERS", "nats://192.168.99.11:4222,nats://192.168.99.12:4222")
+NATS_SERVERS_STR = os.getenv("NATS_SERVERS", "nats://127.0.0.1:4222")
 NATS_SERVERS = [s.strip() for s in NATS_SERVERS_STR.split(",")]
-NATS_TOKEN = os.getenv("NATS_TOKEN", "h1_secret_token")
+NATS_TOKEN = os.getenv("NATS_TOKEN", "")
 
 BRIDGE_TOPIC = "intents.hh_expert"
 

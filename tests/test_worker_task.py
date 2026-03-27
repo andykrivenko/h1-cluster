@@ -12,8 +12,9 @@ sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 import nats
 from nats.errors import TimeoutError as NatsTimeout
 
-SERVERS = ['nats://192.168.99.11:4222', 'nats://192.168.99.12:4222']
-TOKEN = 'h1_secret_token'
+_servers_str = os.getenv("NATS_SERVERS", "nats://127.0.0.1:4222")
+SERVERS = [s.strip() for s in _servers_str.split(',')]
+TOKEN = os.getenv("NATS_TOKEN", "")
 
 TASK_TOPIC = 'tasks.hhparse'
 RESULT_TOPIC = 'tasks.results'
